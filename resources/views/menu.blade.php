@@ -58,7 +58,7 @@
                     </div>
                 </a>
                 
-                <button type="button" onclick="toggleCart()" aria-label="Abrir carrito" class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg shadow-blue-600/50 transition-all duration-200 hover:bg-blue-700">
+                <button type="button" onclick="toggleCart()" aria-label="Abrir carrito" class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg shadow-blue-600/50 transition-all hover:bg-blue-700 hover:shadow-blue-600/75">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="8" cy="21" r="1"></circle>
                         <circle cx="19" cy="21" r="1"></circle>
@@ -101,10 +101,10 @@
                 </p>
                 
                 <div class="mt-10 grid gap-4 sm:grid-cols-2 md:max-w-2xl">
-                    <a href="#menu" class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-blue-600/50 transition-all duration-200 hover:bg-blue-700">
+                    <a href="#menu" class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-blue-600/50 transition-all hover:bg-blue-700 hover:shadow-blue-600/75">
                         Ver Menú
                     </a>
-                    <a href="https://wa.me/584141427822" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 bg-transparent px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all duration-200 hover:bg-blue-600/10">
+                    <a href="https://wa.me/584141427822" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 bg-transparent px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all hover:bg-blue-600/10">
                         Ordenar Ahora
                     </a>
                 </div>
@@ -112,7 +112,7 @@
             
             <div class="relative mx-auto hidden max-w-md items-center justify-center md:flex">
                 <div class="absolute h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
-                <div class="relative w-72 h-72 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center text-white font-black text-5xl shadow-2xl border-4 border-blue-400">
+                <div class="relative w-72 h-72 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center text-white font-black text-5xl shadow-2xl border-4 border-blue-400/30">
                     LB
                 </div>
             </div>
@@ -135,9 +135,9 @@
 
             <div class="mb-10 rounded-lg border border-blue-600/30 bg-white/5 p-3 shadow-lg backdrop-blur-sm">
                 <div class="flex gap-3 overflow-x-auto no-scrollbar">
-                    <button type="button" data-filter="all" onclick="filterMenu('all')" class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase tracking-wider transition duration-200 text-white">Todos</button>
-                    <button type="button" data-filter="combos" onclick="filterMenu('combos')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase tracking-wider transition duration-200 hover:border-blue-600/60 text-gray-300">Combos</button>
-                    <button type="button" data-filter="hamburguesas" onclick="filterMenu('hamburguesas')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase tracking-wider transition duration-200 hover:border-blue-600/60 text-gray-300">Hamburguesas</button>
+                    <button type="button" data-filter="all" onclick="filterMenu('all')" class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase tracking-wider text-white transition-all hover:bg-blue-700">Todos</button>
+                    <button type="button" data-filter="combos" onclick="filterMenu('combos')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase tracking-wider text-gray-300 transition-all hover:border-blue-600/60">Combos</button>
+                    <button type="button" data-filter="hamburguesas" onclick="filterMenu('hamburguesas')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase tracking-wider text-gray-300 transition-all hover:border-blue-600/60">Hamburguesas</button>
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
                 </button>
 
                 <!-- CONTENIDO COLAPSABLE -->
-                <div id="delivery-content" class="space-y-4 transition-all max-h-96 overflow-hidden">
+                <div id="delivery-content" class="space-y-4 transition-all max-h-0 overflow-hidden opacity-0">
                     <div class="grid grid-cols-2 gap-3">
                         <label class="flex items-center gap-2 cursor-pointer">
                             <input type="radio" name="delivery_type" value="pickup" onchange="updateDeliveryType('pickup')" class="w-4 h-4 accent-blue-600">
@@ -222,7 +222,7 @@
                 </button>
 
                 <!-- CONTENIDO COLAPSABLE -->
-                <div id="payment-content" class="space-y-3 transition-all max-h-96 overflow-hidden">
+                <div id="payment-content" class="space-y-3 transition-all max-h-0 overflow-hidden opacity-0">
                     <!-- TRANSFERENCIA BANCARIA -->
                     <div>
                         <div class="inline-block bg-blue-600 text-white px-3 py-1 rounded-lg font-black text-xs mb-3">
@@ -277,9 +277,9 @@
                     <span id="total-bs" class="text-base font-black text-white">Bs 0.00</span>
                 </div>
 
-                <button onclick="sendOrderWhatsApp()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-black uppercase tracking-wider shadow-lg shadow-blue-600/50 transition-all duration-200 flex items-center justify-center gap-2">
+                <button onclick="sendOrderWhatsApp()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-black uppercase tracking-wider shadow-lg shadow-blue-600/50 transition-all flex items-center justify-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.894-.82-1.385-1.82-1.556-2.115-.171-.295-.09-.458.128-.606.243-.179.521-.465.779-.719.259-.254.326-.423.489-.703.163-.28.082-.521-.041-.728-.123-.206-.694-1.666-.951-2.28-.253-.595-.505-.513-.694-.513-.18 0-.389.013-.597.013-.208 0-.52.078-.792.389-.272.31-1.04 1.016-1.04 2.475 0 1.46 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.711.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.006a9.87 9.87 0 00-4.869 1.23c-1.477.879-2.629 2.26-3.287 3.953.621-1.43 1.902-2.633 3.472-3.212 1.57-.579 3.396-.404 4.887.437.364.205.564.339.564.339l-.761 2.752s-.202.086-.532-.027c-1.631-.56-3.477-.196-4.876.983-.691.596-1.164 1.325-1.395 2.138.308-1.289.99-2.533 1.784-3.504 1.012-1.23 2.546-2.124 4.285-2.154l-.285 2.048z"/>
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.885-.79-1.487-1.768-1.66-2.065-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.006c-1.052 0-2.082.395-2.836 1.109-.757.715-1.176 1.668-1.176 2.667 0 2.592 2.105 4.627 4.679 4.627.95 0 1.857-.23 2.672-.678l.041-.024c.308-.179.595-.355.86-.581 1.287-1.063 1.998-2.582 1.998-4.222.005-2.592-2.105-4.627-4.679-4.627l.006.022z"/>
                     </svg>
                     Enviar Pedido
                 </button>
@@ -295,7 +295,7 @@
         let products = [...DEFAULT_PRODUCTS];
         let cart = [];
         let cartOpen = false;
-        let deliveryExpanded = true;
+        let deliveryExpanded = false;
         let paymentExpanded = false;
         let orderData = {
             deliveryType: null,
@@ -439,11 +439,11 @@
             productsGrid.innerHTML = products.map(product => {
                 const priceBs = (product.price_usd * TASA_CAMBIO).toFixed(0);
                 return `
-                    <article class="group overflow-hidden rounded-lg border border-blue-600/30 bg-gradient-to-br from-white/5 to-white/[0.02] shadow-xl transition-all duration-300 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-600/30">
+                    <article class="group overflow-hidden rounded-lg border border-blue-600/30 bg-gradient-to-br from-white/5 to-white/[0.02] shadow-xl transition-all duration-300 hover:border-blue-600/60 hover:shadow-2xl hover:shadow-blue-600/20">
                         <div class="relative h-64 overflow-hidden bg-gradient-to-br from-gray-900 to-black sm:h-72">
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent flex items-center justify-center font-bold text-gray-600 text-xl">🍔 ${product.category}</div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                            <span class="absolute left-4 top-4 rounded-lg border border-blue-400 bg-black/70 px-3 py-1 text-xs font-black uppercase tracking-widest text-blue-400">${product.tag || 'NUEVO'}</span>
+                            <span class="absolute left-4 top-4 rounded-lg border border-blue-400 bg-black/70 px-3 py-1 text-xs font-black uppercase tracking-widest text-blue-400">${product.tag || '✨'}</span>
                             <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
                                 <div class="max-w-[58%]">
                                     <p class="text-xs font-black uppercase tracking-widest text-blue-400">${product.badge || '⭐'}</p>
@@ -461,7 +461,7 @@
                             <p class="min-h-[56px] text-sm leading-relaxed text-gray-300 sm:text-base">
                                 ${product.description || 'Deliciosa opción del menú'}
                             </p>
-                            <button type="button" onclick="addToCart(${product.id})" class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 px-4 py-3 font-black uppercase transition-all duration-200 text-white shadow-lg shadow-blue-600/50">
+                            <button type="button" onclick="addToCart(${product.id})" class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 px-4 py-3 font-black uppercase tracking-wider text-white transition-all shadow-lg shadow-blue-600/50 hover:shadow-blue-600/75">
                                 🛒 Agregar al carrito
                             </button>
                         </div>
@@ -601,7 +601,7 @@
                     </div>
 
                     <textarea id="note-${index}" placeholder="Ejemplo: Sin picante, sin cebolla..." 
-                        class="hidden w-full px-3 py-2 rounded-lg bg-white/5 border border-blue-600/30 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                        class="hidden w-full px-3 py-2 rounded-lg bg-white/5 border border-blue-600/30 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/50"
                         rows="2" 
                         onchange="updateItemNote(${item.id}, this.value)"
                         onkeyup="updateItemNote(${item.id}, this.value)"></textarea>
